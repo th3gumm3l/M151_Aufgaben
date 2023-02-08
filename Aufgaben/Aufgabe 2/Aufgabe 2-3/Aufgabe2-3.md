@@ -16,4 +16,4 @@ auf eine andere .php Datei ein (`bestellungen.php`) in welcher alle Bestellungen
 Fügen Sie nun in der Bestellübersicht einen Link ein um die entsprechende Bestellung zu löschen.
 Ruft man den Link auf (`delete.php?id=2`) soll die Bestellung in der Datenbank gelöscht werden.
 
-> Falls Sie möchten können Sie per Javascript noch eine Sicherheitsabfrage ausgeben lassen (`confirm()`)
+> Falls Sie möchten, können Sie per Javascript noch eine Sicherheitsabfrage ausgeben lassen (`confirm()`)
