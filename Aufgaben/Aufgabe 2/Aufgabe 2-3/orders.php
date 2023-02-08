@@ -43,7 +43,7 @@ $statement->execute([
         echo "<td>{$row['order_date']}</td>";
         echo "<td>{$row['shipped_date']}</td>";
         echo "<td>{$row['ship_city']}</td>";
-        echo "<td><a href='orders.php?id={$row['id']}'>Löschen</a></td>";
+        echo "<td><a href='deleteOrder.php?id={$row['id']}'>Löschen</a></td>";
         echo "</tr>";
     }
     ?>

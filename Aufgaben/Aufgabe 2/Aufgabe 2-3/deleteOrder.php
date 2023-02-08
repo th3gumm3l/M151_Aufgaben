@@ -15,7 +15,7 @@ catch (PDOException $e) {
 }
 
 $orderID = $_GET['id'];
-$sql = "DELETE FROM orders WHERE customer_id = :id";
+$sql = "DELETE FROM orders WHERE id = :id";
 
 
 $statement = $conn->prepare($sql);
