@@ -1,4 +1,5 @@
 <?php
+//Datenbank anbindung
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,6 +16,8 @@ echo "Connected successfully<br />";
 mysqli_select_db($conn, $database);
 
 echo "Datenbank ausgewählt!<br />";
+//Datenbank anbindung
+
 
 //Beispiel
 echo "<br />Beispiel<br />";
@@ -32,7 +35,9 @@ else {
 echo "<br />Aufgabe 1<br />";
 if ($result->num_rows > 0) {
     echo $result->num_rows . " Resultate<br />";
-    var_dump($result);
+
+    dump($result);
+
     echo "<br />";
 }
 else {
@@ -47,11 +52,29 @@ $result2 = $conn->query($sql2);
 
 if ($result2->num_rows > 0) {
     echo $result2->num_rows . " Resultate<br />";
-    var_dump($result2);
+
+    dump($result2);
+
     echo "<br />";
 }
 else {
     echo "Keine Resultate vorhanden";
 }
+
+//Datenausgabe
+echo "<br />Datenausgabe<br />";
+while ($record = mysqli_fetch_assoc($result)){
+    dump($record);
+}
+
+
+//Funktion für VarDump
+function dump($args): void
+{
+    echo "<pre>";
+    var_dump($args);
+    echo "<pre/>";
+}
+
 
 mysqli_close($conn);
